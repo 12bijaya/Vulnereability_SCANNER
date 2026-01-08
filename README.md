@@ -76,6 +76,7 @@ pip install -r requirements.txt
 # 3. Run the scanner
 python scanner.py
 ```
+---
 
 ## 🎯 Detection Capabilities
 
@@ -101,6 +102,6 @@ python scanner.py
 # Blind SQLi
 "' AND (SELECT ascii(substring(user(),1,1)))>100--"
 ```
-
+---
 
 
